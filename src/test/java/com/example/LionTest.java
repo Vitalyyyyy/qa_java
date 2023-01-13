@@ -37,8 +37,13 @@ public class LionTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void lionGetFoodPositiveTest() throws Exception {
+        Lion lion = new Lion("Самец", feline);
+        List<String> expected = List.of("Животные", "Птицы", "Рыба");
+        Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+        List<String> actual = lion.getFood();
+        Assert.assertEquals(expected, actual);
+
+    }
 }
-
-
-
-

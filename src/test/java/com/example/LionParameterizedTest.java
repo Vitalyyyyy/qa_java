@@ -1,8 +1,12 @@
 package com.example;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.mockito.Mockito;
+
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -37,6 +41,5 @@ public class LionParameterizedTest {
         Lion lion = new Lion(sex, feline);
         boolean actualHasMane = lion.doesHaveMane();
         assertEquals(expected, actualHasMane);
-
     }
 }
